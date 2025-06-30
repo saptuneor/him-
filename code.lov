@@ -1,0 +1,48 @@
+import datetime
+
+def buat_surat_cinta():
+    # Mengambil informasi dari pengguna
+    nama_pengirim = input("Masukkan nama Anda: ")
+    nama_penerima = input("Masukkan nama pasangan Anda: ")
+    pesan_pembuka = input("Apa pesan pembuka Anda? (Contoh: Sayangku, Cintaku): ")
+    pesan_inti_1 = input("Apa hal pertama yang ingin Anda ungkapkan tentang perasaan Anda?: ")
+    pesan_inti_2 = input("Apa kenangan manis yang ingin Anda bagikan atau janji yang ingin Anda buat?: ")
+    pesan_penutup = input("Apa pesan penutup Anda? (Contoh: Selamanya milikmu, Dengan segenap cinta): ")
+
+    # Mendapatkan tanggal hari ini
+    tanggal_sekarang = datetime.date.today().strftime("%d %B %Y")
+
+    # Membuat isi surat
+    surat_cinta = f"""
+{tanggal_sekarang}
+
+Untuk {pesan_pembuka} {nama_penerima},
+
+Hari ini, di tanggal yang indah ini, aku ingin menuliskan semua perasaanku padamu.
+{pesan_inti_1}
+Setiap detik bersamamu adalah anugerah terindah yang tak pernah kubayangkan.
+{pesan_inti_2}
+Aku berharap cinta kita akan terus bersemi dan menjadi lebih kuat seiring berjalannya waktu.
+
+{pesan_penutup},
+
+{nama_pengirim}
+"""
+    return surat_cinta
+
+# Menjalankan fungsi untuk membuat surat
+surat = buat_surat_cinta()
+print("\n--- Surat Cintamu Telah Dibuat ---")
+print(surat)
+print("---------------------------------")
+
+# Opsi untuk menyimpan surat ke dalam file
+simpan_file = input("Apakah Anda ingin menyimpan surat ini ke dalam file teks? (ya/tidak): ").lower()
+if simpan_file == 'ya':
+    nama_file = f"surat_cinta_{datetime.date.today().strftime('%Y%m%d')}.txt"
+    try:
+        with open(nama_file, "w") as file:
+            file.write(surat)
+        print(f"Surat berhasil disimpan di '{nama_file}'")
+    except Exception as e:
+        print(f"Terjadi kesalahan saat menyimpan file: {e}")
