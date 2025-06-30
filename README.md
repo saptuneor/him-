@@ -1,4 +1,3 @@
 # him-
-in fact THIS IS NOT MY STYLE and this not something special BUT this is something new to me, that achievement soo i love it.... thanks for no judge and know my reason overreaction
-
+Every heart has a melody, and if you find someone whose song harmonizes with yours, play on, When words fail, music speaks. When music fades, memories linger.
 ˙✧˖°📷 ༘ ⋆｡˚𓇼🫧🍰♡ ༘*.ﾟ🧸🎀
